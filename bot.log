@@ -1,0 +1,318 @@
+2025-04-11 15:28:18,818 - aiogram.dispatcher - INFO - Start polling 
+2025-04-11 15:28:19,641 - aiogram.event - INFO - Update id=59559597 is handled. Duration 532 ms by bot id=7402256865 
+2025-04-11 15:28:19,668 - aiogram.event - INFO - Update id=59559596 is handled. Duration 547 ms by bot id=7402256865 
+2025-04-11 15:28:32,463 - aiogram.event - INFO - Update id=59559598 is handled. Duration 422 ms by bot id=7402256865 
+2025-04-11 15:34:30,305 - aiogram.event - INFO - Update id=59559599 is handled. Duration 6092 ms by bot id=7402256865 
+2025-04-11 15:34:39,891 - aiogram.event - INFO - Update id=59559600 is handled. Duration 453 ms by bot id=7402256865 
+2025-04-11 15:34:41,718 - aiogram.event - INFO - Update id=59559601 is not handled. Duration 452 ms by bot id=7402256865 
+2025-04-11 15:34:41,719 - aiogram.event - ERROR - Cause exception while process update id=59559601 by bot id=7402256865
+TelegramBadRequest: Telegram server says - Bad Request: message can't be edited 
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 222, in __aexit__
+    await self.gen.athrow(typ, value, traceback)
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\fsm\storage\memory.py", line 69, in lock
+    yield
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\app.py", line 112, in xabar_kelganda
+    await m.edit_text(m.text.upper())
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\methods\base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\client\bot.py", line 453, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\client\session\base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\client\session\aiohttp.py", line 185, in make_request
+    response = self.check_response(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\client\session\base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: message can't be edited
+2025-04-11 15:34:51,300 - aiogram.event - INFO - Update id=59559602 is handled. Duration 547 ms by bot id=7402256865 
+2025-04-11 15:34:56,972 - aiogram.event - INFO - Update id=59559603 is handled. Duration 625 ms by bot id=7402256865 
+2025-04-11 15:34:58,492 - aiogram.event - INFO - Update id=59559604 is handled. Duration 671 ms by bot id=7402256865 
+2025-04-11 15:35:02,562 - aiogram.event - INFO - Update id=59559605 is handled. Duration 953 ms by bot id=7402256865 
+2025-04-11 15:36:17,439 - aiogram.dispatcher - INFO - Polling stopped 
+2025-04-11 15:40:36,432 - aiogram.dispatcher - INFO - Start polling 
+2025-04-11 15:40:43,815 - aiogram.event - INFO - Update id=59559606 is handled. Duration 532 ms by bot id=7402256865 
+2025-04-11 15:40:48,275 - aiogram.dispatcher - INFO - Polling stopped 
+2025-04-11 15:41:41,372 - aiogram.dispatcher - INFO - Start polling 
+2025-04-11 15:41:43,003 - aiogram.event - INFO - Update id=59559607 is handled. Duration 733 ms by bot id=7402256865 
+2025-04-11 15:41:44,564 - aiogram.event - INFO - Update id=59559608 is handled. Duration 515 ms by bot id=7402256865 
+2025-04-11 15:41:46,001 - aiogram.event - INFO - Update id=59559609 is handled. Duration 421 ms by bot id=7402256865 
+2025-04-11 15:42:27,502 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientOSError: [WinError 121] Превышен таймаут семафора 
+2025-04-11 15:42:27,503 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7402256865) 
+2025-04-11 15:42:38,867 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 7402256865) 
+2025-04-11 15:43:45,168 - aiogram.dispatcher - INFO - Polling stopped 
+2025-04-11 15:43:50,554 - aiogram.dispatcher - INFO - Start polling 
+2025-04-11 15:43:51,479 - aiogram.event - INFO - Update id=59559610 is handled. Duration 609 ms by bot id=7402256865 
+2025-04-11 15:43:53,053 - aiogram.event - INFO - Update id=59559611 is handled. Duration 484 ms by bot id=7402256865 
+2025-04-11 15:43:54,687 - aiogram.event - INFO - Update id=59559612 is not handled. Duration 875 ms by bot id=7402256865 
+2025-04-11 15:43:54,688 - aiogram.event - ERROR - Cause exception while process update id=59559612 by bot id=7402256865
+TypeError: getenv() got an unexpected keyword argument 'text' 
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 222, in __aexit__
+    await self.gen.athrow(typ, value, traceback)
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\fsm\storage\memory.py", line 69, in lock
+    yield
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\app.py", line 103, in ha_tanlanganda
+    await call.bot.send_message(chat_id=getenv("MY_ID",text="x"))
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: getenv() got an unexpected keyword argument 'text'
+2025-04-11 15:44:42,064 - aiogram.dispatcher - INFO - Polling stopped 
+2025-04-11 15:44:47,149 - aiogram.dispatcher - INFO - Start polling 
+2025-04-11 15:44:47,982 - aiogram.event - INFO - Update id=59559613 is handled. Duration 500 ms by bot id=7402256865 
+2025-04-11 15:44:52,537 - aiogram.event - INFO - Update id=59559614 is handled. Duration 530 ms by bot id=7402256865 
+2025-04-11 15:44:54,410 - aiogram.event - INFO - Update id=59559615 is handled. Duration 561 ms by bot id=7402256865 
+2025-04-11 15:50:09,021 - aiogram.dispatcher - INFO - Polling stopped 
+2025-04-11 16:10:25,632 - aiogram.dispatcher - INFO - Start polling 
+2025-04-11 16:11:14,022 - aiogram.dispatcher - INFO - Polling stopped 
+2025-04-11 16:11:26,374 - aiogram.dispatcher - INFO - Start polling 
+2025-04-11 16:11:30,962 - aiogram.event - INFO - Update id=59559616 is handled. Duration 547 ms by bot id=7402256865 
+2025-04-11 16:11:32,330 - aiogram.event - INFO - Update id=59559617 is handled. Duration 436 ms by bot id=7402256865 
+2025-04-11 16:11:33,705 - aiogram.event - INFO - Update id=59559618 is not handled. Duration 547 ms by bot id=7402256865 
+2025-04-11 16:11:33,705 - aiogram.event - ERROR - Cause exception while process update id=59559618 by bot id=7402256865
+TelegramBadRequest: Telegram server says - Bad Request: chat not found 
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 222, in __aexit__
+    await self.gen.athrow(typ, value, traceback)
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\fsm\storage\memory.py", line 69, in lock
+    yield
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\app.py", line 105, in ha_tanlanganda
+    await call.bot.send_message(chat_id=i,text=f"{call.from_user.full_name}  {matn} ni tanladi")
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\client\bot.py", line 2825, in send_message
+    return await self(call, request_timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\client\bot.py", line 453, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\client\session\base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\client\session\aiohttp.py", line 185, in make_request
+    response = self.check_response(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\client\session\base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: chat not found
+2025-04-11 16:12:07,568 - aiogram.event - INFO - Update id=59559619 is handled. Duration 359 ms by bot id=7402256865 
+2025-04-11 16:12:09,310 - aiogram.event - INFO - Update id=59559620 is handled. Duration 500 ms by bot id=7402256865 
+2025-04-11 16:12:10,789 - aiogram.event - INFO - Update id=59559621 is not handled. Duration 561 ms by bot id=7402256865 
+2025-04-11 16:12:10,790 - aiogram.event - ERROR - Cause exception while process update id=59559621 by bot id=7402256865
+TelegramBadRequest: Telegram server says - Bad Request: chat not found 
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 222, in __aexit__
+    await self.gen.athrow(typ, value, traceback)
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\fsm\storage\memory.py", line 69, in lock
+    yield
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\app.py", line 105, in ha_tanlanganda
+    await call.bot.send_message(chat_id=i,text=f"{call.from_user.full_name}  {matn} ni tanladi")
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\client\bot.py", line 2825, in send_message
+    return await self(call, request_timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\client\bot.py", line 453, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\client\session\base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\client\session\aiohttp.py", line 185, in make_request
+    response = self.check_response(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\bunyodbek\telegram_dars1\env\Lib\site-packages\aiogram\client\session\base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: chat not found
+2025-04-11 16:29:08,468 - aiogram.dispatcher - INFO - Polling stopped 
