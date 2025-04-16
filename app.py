@@ -23,3 +23,4 @@ def tozalash()->InlineKeyboardMarkup:
     inline.button(text="Ha", callback_data="ha")
     inline.button(text="Yo'q",callback_data="yoq")
     return inline.as_markup()
+
